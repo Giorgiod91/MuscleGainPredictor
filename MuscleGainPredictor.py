@@ -159,5 +159,19 @@ y_train = [LBM_change]
 
 
 def compute_cost(X,y,w,b):
-    m, = X.shape()
-    
+    # for a better understanding what happens 
+    # f_wb = np.array([...])  # Predicted values VECTOR
+    # y = np.array([...])  # True values VECTOR
+    # errors = f_wb - y compute the vector of errors
+    # cost = np.sum(errors ** 2) compute the squared errors and sum them
+
+
+    m = X.shape[0]  # Number of training examples
+    cost = 0.0 # initalize cost with 0
+    for i in range(m):
+        f_wb_i = np.dot(X[i], w) +b # predicted value of 1 example
+        cost = cost + (f_wb_i - y[i]) **2
+    cost = cost/ (2 * m) # Normalize errors and simplify gradients
+
+
+    return cost
