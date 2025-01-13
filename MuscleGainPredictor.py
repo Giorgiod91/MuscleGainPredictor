@@ -29,9 +29,9 @@ def get_LBM_change(data):
 
 # function to get the training time times per week cause thats a big factor in my opinion
 def get_training_time(data):
-    for colum in data.colums:
-        if "(times/week)" in colum.lower().strip:
-            return colum
+    for column in data.columns:
+        if "(times/week)" in column.lower().strip():
+            return column
         
     return None
 
