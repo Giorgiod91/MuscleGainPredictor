@@ -1,0 +1,3 @@
+- need to have a good selection of x_features to maximize the accuracy of the output(result)
+- implement linear regression
+- let user input their weight height age protein and energy intake ? is that too much ?
